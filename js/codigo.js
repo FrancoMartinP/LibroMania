@@ -1,13 +1,26 @@
-let carrito = []; //creo variable del carrito como array vacio
-//variables que van a tomar datos externos
+
+let carrito = [];
+
 const contenedor = document.querySelector("#contenedor");
 const carritoContenedor = document.querySelector("#carritoContenedor");
 const vaciarCarrito = document.querySelector("#vaciarCarrito");
-const activarFuncion = document.querySelector("#activarFuncion");
+const recargarPagina = document.querySelector("#recargarPagina");
 const formulario = document.querySelector('#procesar-pago')
 const procesarCompra = document.querySelector("#procesarCompra");
 const totalProceso = document.querySelector("#totalProceso");
 const precioTotal = document.querySelector("#precioTotal");
+
+
+if (recargarPagina) {
+  recargarPagina.addEventListener("click", procesarPedido);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  mostrarCarrito();
+});
+
 
 //creo los atributos de cada elemento del array 
 const stockLibros = [
@@ -17,7 +30,7 @@ const stockLibros = [
       cantidad: 1,
       desc: "J. k. Rowling",
       precio: 6500,
-      img: "harry.jpg",
+      img: "img/harry.jpg",
     },
     {
       id: 2,
@@ -25,7 +38,7 @@ const stockLibros = [
       cantidad: 1,
       desc: "J. R. R. Tolkien",
       precio: 5600,
-      img: "anillo.jpg",
+      img: "img/anillo.jpg",
     },
     {
       id: 3,
@@ -33,7 +46,7 @@ const stockLibros = [
       cantidad: 1,
       desc: " C. S. Lewis ",
       precio: 4700,
-      img: "narnia.jpg",
+      img: "img/narnia.jpg",
     },
   ];
 
@@ -58,8 +71,8 @@ stockLibros.forEach((prod) => {
 
   //a traves de la validacion if agrego productos individuales con push ó cantidad del mismo producto
 const agregarProducto = (id) => {
-    const existe = carrito.some(prod => prod.id === id)
-  
+  const existe = carrito.some(prod => prod.id === id)
+
     if(existe){
       const prod = carrito.map(prod => {
         if(prod.id === id){
@@ -82,14 +95,13 @@ if (vaciarCarrito) {
   });
 }
 
-//
+//detalles de los productos que se muestran en el carrito
 const mostrarCarrito = () => {
   const modalBody = document.querySelector(".modal .modal-body");
   if (modalBody) {
     modalBody.innerHTML = "";
     carrito.forEach((prod) => {
       const { id, nombre, precio, desc, img, cantidad } = prod;
-      console.log(modalBody);
       modalBody.innerHTML += `
       <div class="modal-contenedor";>
         <div>
@@ -169,6 +181,12 @@ function procesarPedido() {
     0
   );
 }
+//recargo la pagina y no desaparece lo que habia agregado al carrito 
+document.addEventListener("DOMContentLoaded", () => {
+  carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  mostrarCarrito();
+});
 
 
 
