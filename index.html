@@ -14,6 +14,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
   />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="css/estilos.css" />
 
     <title>LibroMania</title>
@@ -35,9 +36,16 @@
         </ul>
       </nav>
     </header>
+    <div>
+      <a href="#" id="jsonBtn" class="masvendidos">Libros mas vendidos del Año</a>
+    </div>
+    <div>
+      <div id="resultado" class="ubi"></div>
+    </div>
     <main>
         <div class="row mt-5" id="contenedor"></div>
     </main>
+
 
     <div class="container-xl">
         <div class="modal" tabindex="-1" role="dialog" id="modal">
@@ -62,22 +70,19 @@
                 <button type="button" id="procesarCompra" class="btn btn-primary">
                   Continuar compra
                 </button>
-<!--                 <button id="cerrar"
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Cerrar
-                </button> -->
-  
                 <span><b>Precio total:  $</b></span>
                 <p class="text-center" id="precioTotal"></p>
               </div>
             </div>
           </div>
         </div>
-        <script src="js/codigo.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
 
+        <footer>
+          <p><b>@Copyright Franco Pereyra 2022</b></p>
+        </footer>
+        <script src="js/codigo.js"></script>
+        <script src="js/local.json"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

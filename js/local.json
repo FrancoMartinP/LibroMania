@@ -1,0 +1,24 @@
+
+[
+    {
+      "id": 1,
+      "nombre": "<b>Libro:</b> Harry Potter y las reliquias de la Muerte Parte 2 <br>",
+      "desc": "<b>Autor:</b> J. k. Rowling<br>",
+      "precio": "<b>Precio:</b> $6500",
+      "img": "./img/harry.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "<b>Libro:</b> Padre rico, padre pobre<br>",
+      "desc": "<b>Autor:</b> Robert T. Kiyosaki<br>",
+      "precio": "<b>Precio:</b> $5600",
+      "img": "img/padre.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "<b>Libro:</b> El diario de Ana Frank<br>",
+      "desc": "<b>Autor:</b> Anne Frank<br>",
+      "precio": "<b>Precio:</b> $4700",
+      "img": "img/ana.jpg"
+    }
+  ]

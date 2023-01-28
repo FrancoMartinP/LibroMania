@@ -15,13 +15,13 @@
     <div id="bienvenida" class="mensaje"></div>
     <form id="formulario">
       <h3>Formulario de Compra</h3>
-      <label> Tu nombre: <input class="color" type="text" id="nombre" required/> </label>
+      <label>Titular de la Tarjeta:<input class="color" type="text" id="nombre" required/> </label>
+      <label>Fecha de Nacimiento:<input class="color" type="text" id="fecha" required/> </label>
       <label>E-mail: <input class="color" type="email" id="email" required></label>
-      <label>
-        Año en el que naciste: <input class="color" type="number" id="fecha" maxlength="4" required/>
-      </label>
-      <label>Numeros de tu tarjeta: <input class="color" type="text" maxlength="12" required></label>
-      <button type="submit">Comprar</button>
+      <label>Numero de Tarjeta<input class="color" type="text" maxlength="12" required id="contraseña"></label>
+      <label>Visa <input type="checkbox"></label>
+      <label>Mastercard <input type="checkbox"></label>
+      <button type="submit" id="ingresar">Ingresar</button>
     </form>
 
     <script src="js/registro.js"></script>
