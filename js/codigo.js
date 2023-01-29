@@ -10,9 +10,6 @@ const totalProceso = document.querySelector("#totalProceso");
 const precioTotal = document.querySelector("#precioTotal");
 
 
-
-
-
 //creo los atributos de cada elemento del array 
 const stockLibros = [
     {
@@ -164,6 +161,9 @@ compraData();
   guardarStorage();
 };
 
+
+// al recargar la pagina los productos no se borran, siguen en el carrito
+// gracias a los datos almacenados en localStorage
 if (recargarPagina) {
   recargarPagina.addEventListener("click", procesarPedido);
 }
@@ -208,16 +208,9 @@ function procesarPedido() {
     0
   );
 }
-//recargo la pagina y no desaparece lo que habia agregado al carrito 
-document.addEventListener("DOMContentLoaded", () => {
-  carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-  mostrarCarrito();
-});
 
 
-
-//uso de fetch para retornar en la pagina datos almacenados en el JSON local con el boton "Libros mas vendidos del Año"
+//USO DE FETCH para retornar en la pagina datos almacenados en el LOCAL.JSON con el boton "Libros mas vendidos del Año"
 document.getElementById('jsonBtn').addEventListener('click', cargarJSON);
 
 function cargarJSON() {

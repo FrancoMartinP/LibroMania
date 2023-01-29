@@ -1,20 +1,29 @@
+
 .imagen{
     max-width:100%;
 }
 nav {
-/* background-image:url("Pre--entrega3 Franco Per/img/fondo.jpg");  */
 margin: 1.4rem auto;
+}
+h1 {
+    text-align: center;
 }
 h2 {
     font-size: 50px;
     margin-left: 43rem;
 }
+
+#btnFetch {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgb(15, 15, 20);
+}
 .masvendidos {
-color: rgb(44, 139, 223);
-background: rgb(164, 201, 162);
-font-size: 1.3rem;
-margin: 42%;
-border-radius: 0.8rem;
+color: rgb(7, 11, 14);
+background: rgb(234, 234, 41);
+font-size: 1.2rem;
+margin: 28%;
+border-radius: 0.4rem;
 }
 .ubi {
 color: rgb(8, 8, 8);
@@ -78,4 +87,8 @@ a{
 }
 .boton{
     opacity:0;
+}
+#foot {
+
+    padding: 2rem;
 }
